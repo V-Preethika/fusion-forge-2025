@@ -40,7 +40,11 @@ const Register = () => {
 
           <div className="pt-4">
             <Button className="w-full text-lg py-6" size="lg" asChild>
-              <a href="https://forms.google.com/your-form-link" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeUI_0aPRODrIX0fxBpL_7HcQMAmOQNIFK-wF_z69SAXZv3LA/viewform?usp=header" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Register Now
               </a>
             </Button>

@@ -35,9 +35,14 @@ const Index = () => {
               Innovate. Code. Compete.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/register" className="button-primary">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeUI_0aPRODrIX0fxBpL_7HcQMAmOQNIFK-wF_z69SAXZv3LA/viewform?usp=header" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="button-primary"
+              >
                 Register Now
-              </Link>
+              </a>
               <Link
                 to="/guidelines"
                 className="inline-flex items-center justify-center rounded-lg border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
