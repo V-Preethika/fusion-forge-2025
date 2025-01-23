@@ -21,9 +21,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/veltech-logo.png" alt="Veltech Logo" className="h-10" />
-              <span className="text-xl font-bold text-primary">Fusion Forge '25</span>
+            <Link to="/" className="flex items-center gap-4">
+              <img 
+                src="/lovable-uploads/9aa577b1-6d9b-4b31-a434-23b4eb9b0a19.png" 
+                alt="Vel Tech Logo" 
+                className="h-12 md:h-14"
+              />
+              <div className="flex flex-col items-start">
+                <span className="text-xl font-bold text-primary">Fusion Forge '25</span>
+                <span className="text-xs text-muted-foreground hidden md:block">Vel Tech R&D Institute of Science and Technology</span>
+              </div>
             </Link>
           </nav>
         </div>
