@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Users, Mail, Phone, Check, AlertTriangle, Award, Building, Instagram } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Mail, Phone, Check, AlertTriangle, Award, Building, Instagram, Coffee, IndianRupee, Trophy, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -44,77 +44,113 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Info Section */}
+      {/* About Section */}
       <section className="py-20 bg-secondary">
         <div className="container px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              className="p-6 rounded-lg bg-background/50 backdrop-blur-sm border border-border"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Calendar className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Date</h3>
-              <p className="text-muted-foreground">Feb 12 - Feb 13, 2025</p>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg bg-background/50 backdrop-blur-sm border border-border"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Clock className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Duration</h3>
-              <p className="text-muted-foreground">24 Hours</p>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg bg-background/50 backdrop-blur-sm border border-border"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <MapPin className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Venue</h3>
-              <p className="text-muted-foreground">Learning Space 1 & 2</p>
-            </motion.div>
-
-            <motion.div
-              className="p-6 rounded-lg bg-background/50 backdrop-blur-sm border border-border"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Users className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Team Size</h3>
-              <p className="text-muted-foreground">3 Members</p>
-            </motion.div>
+          <h2 className="section-title text-center mb-8">About Fusion Forge '25</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <p className="text-lg text-muted-foreground text-center">
+              Fusion Forge '25 is an electrifying 24-hour hackathon where brilliant minds gather to innovate, solve problems, and create impactful solutions. Participants will compete in a hybrid mode, bringing the convenience of online collaboration and the excitement of offline interaction.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="card-hover">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Calendar className="text-primary" />
+                    Online Phase
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Feb 12, 6:00 AM - Feb 13, 6:00 AM
+                </CardContent>
+              </Card>
+              <Card className="card-hover">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Calendar className="text-primary" />
+                    Offline Phase
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Feb 13, 6:00 AM - 6:00 PM
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Schedule Section */}
-      <section id="schedule" className="py-20">
+      {/* Prizes Section */}
+      <section className="py-20">
         <div className="container px-4">
-          <h2 className="section-title text-center mb-12">Event Schedule</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-primary">Feb 12 (Online)</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-4">
-                  <Clock className="text-primary" />
-                  <div>
-                    <span className="font-semibold">6:00 AM</span>
-                    <p className="text-muted-foreground">Event Start (Inauguration & Check-In)</p>
-                  </div>
-                </li>
-                // ... Add more schedule items
-              </ul>
-            </div>
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-primary">Feb 13 (Offline)</h3>
-              <ul className="space-y-4">
-                // ... Add schedule items
-              </ul>
-            </div>
+          <h2 className="section-title text-center mb-8">Prizes</h2>
+          <div className="text-center mb-8">
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+            >
+              <h3 className="text-3xl font-bold text-primary mb-4">
+                <Trophy className="inline-block mr-2" />
+                Prizes worth ₹25,000 await the best minds!
+              </h3>
+            </motion.div>
+            <p className="text-lg text-muted-foreground italic">
+              "Pay ₹300 for a chance to win ₹10,000 and free snacks—this is the jackpot you've been waiting for! 🎉"
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <PrizeCard title="1st Prize" amount="₹10,000" icon={<Trophy className="text-yellow-500" />} />
+            <PrizeCard title="2nd Prize" amount="₹7,500" icon={<Trophy className="text-gray-400" />} />
+            <PrizeCard title="3rd Prize" amount="₹5,000" icon={<Trophy className="text-amber-600" />} />
+            <Card className="card-hover">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Sparkles className="text-primary" />
+                  Consolation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>₹1,000 each for three teams</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statements Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container px-4">
+          <h2 className="section-title text-center mb-8">Problem Statements</h2>
+          <Card className="max-w-2xl mx-auto">
+            <CardContent className="p-6">
+              <p className="text-center text-lg">
+                Problem statements will be shared with registered participants on Feb 11 via email and on the website.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Food Menu Section */}
+      <section className="py-20">
+        <div className="container px-4">
+          <h2 className="section-title text-center mb-8">Food Menu</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Coffee className="text-primary" />
+                  Feb 13 (Offline)
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <MenuItem time="8:30 AM" item="Breakfast" />
+                <MenuItem time="10:30 AM" item="Tea Break" />
+                <MenuItem time="12:30 PM" item="Lunch" />
+                <MenuItem time="3:00 PM" item="Tea & Snacks" />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -122,7 +158,7 @@ const Index = () => {
       {/* Guidelines Section */}
       <section id="guidelines" className="py-20 bg-secondary">
         <div className="container px-4">
-          <h2 className="section-title text-center mb-12">Event Guidelines</h2>
+          <h2 className="section-title text-center mb-8">Event Guidelines</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
@@ -168,128 +204,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Organizers Section */}
-      <section id="organizers" className="py-20">
-        <div className="container px-4">
-          <h2 className="section-title text-center mb-12">Event Organizers</h2>
-          
-          <div className="space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Head of Department</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg">Dr. S. Alex David</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Event Coordinators</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p>Dr. R. Madonna Arieth (Associate Professor) - 9994537728</p>
-                <p>Dr. B. Prabhu Shankar (Associate Professor) - 9894123922</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Faculty Coordinators</CardTitle>
-              </CardHeader>
-              <CardContent className="grid md:grid-cols-2 gap-4">
-                <p>Dr. Peer Mohamed Appa M A Y</p>
-                <p>Dr. M. Misba</p>
-                <p>Dr. B. Sakthi Karthi Durai</p>
-                <p>Dr. Devi P. P.</p>
-                <p>Dr. D. Prabhu</p>
-                <p>Ms. D. Annal Priyadarshini</p>
-                <p>Mrs. M. S. Saranya</p>
-                <p>Mrs. A. Lizy</p>
-                <p>Ms. N. Hindumathy</p>
-              </CardContent>
-            </Card>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <TeamCard
-                title="Presidents"
-                members={[
-                  { name: "B. Haneesha", id: "VTU22330" },
-                  { name: "V. Preethika", id: "VTU21532" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Vice-Presidents"
-                members={[
-                  { name: "T. Sonika", id: "VTU22119" },
-                  { name: "B. Aswith Kumar", id: "VTU21693" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Tech Leads"
-                members={[
-                  { name: "K. Prasad", id: "VTU24185" },
-                  { name: "Abdullah H. I", id: "VTU22413" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Design Leads"
-                members={[
-                  { name: "M.V.L. Sravanthi", id: "VTU23377" },
-                  { name: "N. Vinod Kumar", id: "VTU23455" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Management Leads"
-                members={[
-                  { name: "K. Prashanth", id: "VTU23449" },
-                  { name: "K. Yashwanthi", id: "VTU22625" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Treasury"
-                members={[
-                  { name: "R. K. Gowtham", id: "VTU21354" },
-                  { name: "P. Hari Govind", id: "VTU21907" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Marketing Team"
-                members={[
-                  { name: "P. Akshay", id: "VTU27165" },
-                  { name: "S. Sasi Kumar Reddy", id: "VTU23375" }
-                ]}
-              />
-              
-              <TeamCard
-                title="Sponsors Team"
-                members={[
-                  { name: "Aadityan M", id: "VTU23911" },
-                  { name: "M. Charan", id: "VTU22691" },
-                  { name: "Sai Charan", id: "VTU22439" }
-                ]}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-secondary">
         <div className="container px-4">
-          <h2 className="section-title text-center mb-12">Contact Us</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+          <h2 className="section-title text-center mb-8">Contact Us</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Building className="text-primary" />
+                  <MapPin className="text-primary" />
                   Venue
                 </CardTitle>
               </CardHeader>
@@ -300,7 +223,6 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -309,23 +231,16 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <a href="tel:+919994537728" className="text-muted-foreground hover:text-primary">
-                    +91 99945 37728
-                  </a>
+                <div className="space-y-2">
+                  <p>Dr. R. Madonna Arieth (Associate Professor)</p>
+                  <p className="text-primary">+91 9994537728</p>
+                </div>
+                <div className="space-y-2">
+                  <p>Dr. B. Prabhu Shankar (Associate Professor)</p>
+                  <p className="text-primary">+91 9894123922</p>
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Button variant="outline" size="lg" asChild>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <Instagram className="w-4 h-4" />
-                Follow us on Instagram
-              </a>
-            </Button>
           </div>
         </div>
       </section>
@@ -341,33 +256,33 @@ const Index = () => {
   );
 };
 
+const MenuItem = ({ time, item }: { time: string; item: string }) => (
+  <div className="flex items-center gap-4">
+    <Coffee className="w-4 h-4 text-primary" />
+    <span className="font-medium">{time}</span>
+    <span className="text-muted-foreground">{item}</span>
+  </div>
+);
+
+const PrizeCard = ({ title, amount, icon }: { title: string; amount: string; icon: React.ReactNode }) => (
+  <Card className="card-hover">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2">
+        {icon}
+        {title}
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-xl font-bold">{amount}</p>
+    </CardContent>
+  </Card>
+);
+
 const Rule = ({ text }: { text: string }) => (
   <div className="flex items-start gap-2">
     <Check className="w-4 h-4 mt-1 text-primary" />
     <span className="text-muted-foreground">{text}</span>
   </div>
-);
-
-const TeamCard = ({ title, members }: { 
-  title: string; 
-  members: Array<{ name: string; id: string; }> 
-}) => (
-  <Card>
-    <CardHeader>
-      <CardTitle className="flex items-center gap-2">
-        <Users className="text-primary" />
-        {title}
-      </CardTitle>
-    </CardHeader>
-    <CardContent className="space-y-2">
-      {members.map((member) => (
-        <div key={member.id} className="p-2 rounded-lg bg-secondary">
-          <p className="font-medium">{member.name}</p>
-          <p className="text-sm text-muted-foreground">{member.id}</p>
-        </div>
-      ))}
-    </CardContent>
-  </Card>
 );
 
 export default Index;
