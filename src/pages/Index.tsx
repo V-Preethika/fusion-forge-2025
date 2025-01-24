@@ -125,7 +125,7 @@ const Index = () => {
           <Card className="max-w-2xl mx-auto">
             <CardContent className="p-6">
               <p className="text-center text-lg">
-                Problem statements will be shared with registered participants on Feb 11 via email and on the website.
+                Problem statements will be shared with registered participants on Feb 12 via email and on the website by 6:00 AM. Get ready for an exciting 24-hour hackathon experience!
               </p>
             </CardContent>
           </Card>
@@ -205,7 +205,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-secondary">
+      <section id="contact" className="py-20">
         <div className="container px-4">
           <h2 className="section-title text-center mb-8">Contact Us</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -219,14 +219,15 @@ const Index = () => {
               <CardContent>
                 <p className="text-muted-foreground">
                   Learning Space 1 and 2,<br />
-                  Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology
+                  Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology<br />
+                  <span className="font-semibold mt-2 block">Department of Artificial Intelligence and Machine Learning</span>
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Phone className="text-primary" />
+                  <Mail className="text-primary" />
                   Contact Details
                 </CardTitle>
               </CardHeader>
@@ -239,6 +240,11 @@ const Index = () => {
                   <p>Dr. B. Prabhu Shankar (Associate Professor)</p>
                   <p className="text-primary">+91 9894123922</p>
                 </div>
+                <div className="space-y-2 mt-4">
+                  <p className="font-semibold">Student Coordinators:</p>
+                  <a href="mailto:vtu22330@veltech.edu.in" className="text-primary block hover:underline">vtu22330@veltech.edu.in</a>
+                  <a href="mailto:vtu21532@veltech.edu.in" className="text-primary block hover:underline">vtu21532@veltech.edu.in</a>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -249,7 +255,7 @@ const Index = () => {
       <footer className="py-8 text-center text-sm text-muted-foreground">
         <p>Website developed by:</p>
         <p className="font-semibold">
-          Preethika V (VTU21532), K.Prasad (VTU24185), Abdullah H.I (VTU22413)
+          Preethika V (VTU21532), Abdullah H.I (VTU22413), K.Prasad (VTU24185)
         </p>
       </footer>
     </div>
