@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Users, Mail, Phone } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Mail, Phone, Check, AlertTriangle, Award, Building, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -121,18 +123,47 @@ const Index = () => {
       <section id="guidelines" className="py-20 bg-secondary">
         <div className="container px-4">
           <h2 className="section-title text-center mb-12">Event Guidelines</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg bg-background/50 backdrop-blur-sm border border-border">
-              <h3 className="text-xl font-semibold mb-4 text-primary">Participant Rules</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>Teams must have 3 members</li>
-                <li>Registration fee: ₹100 per participant</li>
-                <li>Check-in before 8:00 AM on Feb 13</li>
-                <li>Bring valid ID for verification</li>
-                <li>Follow all event timings strictly</li>
-              </ul>
-            </div>
-            // ... Add more guideline sections
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="text-primary" />
+                  Participant Rules
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Rule text="Teams must have 3 members" />
+                <Rule text="Registration fee is ₹100 per participant" />
+                <Rule text="Check in before 8:00 AM on Feb 13 for offline session" />
+                <Rule text="Bring a valid ID for verification" />
+                <Rule text="Follow all event timings strictly" />
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <AlertTriangle className="text-primary" />
+                  Submission Rules
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Rule text="Submit solutions before the specified deadline" />
+                <Rule text="Plagiarism will result in disqualification" />
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Award className="text-primary" />
+                  Judging Criteria
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Rule text="Innovation, feasibility, and execution of solutions" />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -141,14 +172,110 @@ const Index = () => {
       <section id="organizers" className="py-20">
         <div className="container px-4">
           <h2 className="section-title text-center mb-12">Event Organizers</h2>
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-2xl font-semibold text-primary mb-6">Faculty Organizers</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                // ... Add organizer cards
-              </div>
+          
+          <div className="space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Head of Department</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg">Dr. S. Alex David</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Event Coordinators</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p>Dr. R. Madonna Arieth (Associate Professor) - 9994537728</p>
+                <p>Dr. B. Prabhu Shankar (Associate Professor) - 9894123922</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Faculty Coordinators</CardTitle>
+              </CardHeader>
+              <CardContent className="grid md:grid-cols-2 gap-4">
+                <p>Dr. Peer Mohamed Appa M A Y</p>
+                <p>Dr. M. Misba</p>
+                <p>Dr. B. Sakthi Karthi Durai</p>
+                <p>Dr. Devi P. P.</p>
+                <p>Dr. D. Prabhu</p>
+                <p>Ms. D. Annal Priyadarshini</p>
+                <p>Mrs. M. S. Saranya</p>
+                <p>Mrs. A. Lizy</p>
+                <p>Ms. N. Hindumathy</p>
+              </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <TeamCard
+                title="Presidents"
+                members={[
+                  { name: "B. Haneesha", id: "VTU22330" },
+                  { name: "V. Preethika", id: "VTU21532" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Vice-Presidents"
+                members={[
+                  { name: "T. Sonika", id: "VTU22119" },
+                  { name: "B. Aswith Kumar", id: "VTU21693" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Tech Leads"
+                members={[
+                  { name: "K. Prasad", id: "VTU24185" },
+                  { name: "Abdullah H. I", id: "VTU22413" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Design Leads"
+                members={[
+                  { name: "M.V.L. Sravanthi", id: "VTU23377" },
+                  { name: "N. Vinod Kumar", id: "VTU23455" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Management Leads"
+                members={[
+                  { name: "K. Prashanth", id: "VTU23449" },
+                  { name: "K. Yashwanthi", id: "VTU22625" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Treasury"
+                members={[
+                  { name: "R. K. Gowtham", id: "VTU21354" },
+                  { name: "P. Hari Govind", id: "VTU21907" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Marketing Team"
+                members={[
+                  { name: "P. Akshay", id: "VTU27165" },
+                  { name: "S. Sasi Kumar Reddy", id: "VTU23375" }
+                ]}
+              />
+              
+              <TeamCard
+                title="Sponsors Team"
+                members={[
+                  { name: "Aadityan M", id: "VTU23911" },
+                  { name: "M. Charan", id: "VTU22691" },
+                  { name: "Sai Charan", id: "VTU22439" }
+                ]}
+              />
             </div>
-            // ... Add student organizer sections
           </div>
         </div>
       </section>
@@ -157,35 +284,90 @@ const Index = () => {
       <section id="contact" className="py-20 bg-secondary">
         <div className="container px-4">
           <h2 className="section-title text-center mb-12">Contact Us</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <Mail className="text-primary" />
-                <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">contact@fusionforge.com</p>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Building className="text-primary" />
+                  Venue
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Learning Space 1 and 2,<br />
+                  Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Phone className="text-primary" />
+                  Contact Details
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-primary" />
+                  <a href="tel:+919994537728" className="text-muted-foreground hover:text-primary">
+                    +91 99945 37728
+                  </a>
                 </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <Phone className="text-primary" />
-                <div>
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-muted-foreground">+91 1234567890</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Venue</h3>
-              <p className="text-muted-foreground">
-                Learning Space 1 & 2,<br />
-                Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology
-              </p>
-            </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Instagram className="w-4 h-4" />
+                Follow us on Instagram
+              </a>
+            </Button>
           </div>
         </div>
       </section>
+
+      {/* Credits Section */}
+      <footer className="py-8 text-center text-sm text-muted-foreground">
+        <p>Website developed by:</p>
+        <p className="font-semibold">
+          Preethika V (VTU21532), K.Prasad (VTU24185), Abdullah H.I (VTU22413)
+        </p>
+      </footer>
     </div>
   );
 };
+
+const Rule = ({ text }: { text: string }) => (
+  <div className="flex items-start gap-2">
+    <Check className="w-4 h-4 mt-1 text-primary" />
+    <span className="text-muted-foreground">{text}</span>
+  </div>
+);
+
+const TeamCard = ({ title, members }: { 
+  title: string; 
+  members: Array<{ name: string; id: string; }> 
+}) => (
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2">
+        <Users className="text-primary" />
+        {title}
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="space-y-2">
+      {members.map((member) => (
+        <div key={member.id} className="p-2 rounded-lg bg-secondary">
+          <p className="font-medium">{member.name}</p>
+          <p className="text-sm text-muted-foreground">{member.id}</p>
+        </div>
+      ))}
+    </CardContent>
+  </Card>
+);
 
 export default Index;
