@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Users, Mail, Phone, Check, AlertTriangle, Award, Building, Instagram, Coffee, IndianRupee, Trophy, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Mail, Check, AlertTriangle, Award, Building, Instagram, Coffee, IndianRupee, Trophy, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -80,124 +80,132 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Prizes Section */}
-      <section className="py-20">
-        <div className="container px-4">
-          <h2 className="section-title text-center mb-8">Prizes</h2>
-          <div className="text-center mb-8">
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-            >
-              <h3 className="text-3xl font-bold text-primary mb-4">
-                <Trophy className="inline-block mr-2" />
-                Prizes worth ₹25,000 await the best minds!
-              </h3>
-            </motion.div>
-            <p className="text-lg text-muted-foreground italic">
-              "Pay ₹300 for a chance to win ₹10,000 and free snacks—this is the jackpot you've been waiting for! 🎉"
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <PrizeCard title="1st Prize" amount="₹10,000" icon={<Trophy className="text-yellow-500" />} />
-            <PrizeCard title="2nd Prize" amount="₹7,500" icon={<Trophy className="text-gray-400" />} />
-            <PrizeCard title="3rd Prize" amount="₹5,000" icon={<Trophy className="text-amber-600" />} />
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Sparkles className="text-primary" />
-                  Consolation
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>₹1,000 each for three teams</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Problem Statements Section */}
+      {/* Registration Fee Box */}
       <section className="py-20 bg-secondary">
         <div className="container px-4">
-          <h2 className="section-title text-center mb-8">Problem Statements</h2>
-          <Card className="max-w-2xl mx-auto">
-            <CardContent className="p-6">
-              <p className="text-center text-lg">
-                Problem statements will be shared with registered participants on Feb 12 via email and on the website by 6:00 AM. Get ready for an exciting 24-hour hackathon experience!
-              </p>
+          <Card className="max-w-lg mx-auto">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <IndianRupee className="text-primary" />
+                Registration Fee
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-2xl font-bold text-primary">₹300 per team member</p>
+              <p className="text-muted-foreground mt-2">Lunch and snacks included</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Food Menu Section */}
+      {/* Organizers Section */}
       <section className="py-20">
         <div className="container px-4">
-          <h2 className="section-title text-center mb-8">Food Menu</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <h2 className="section-title text-center mb-8">Event Organizers</h2>
+          
+          <div className="grid gap-8 max-w-4xl mx-auto">
+            {/* HOD */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Coffee className="text-primary" />
-                  Feb 13 (Offline)
+                  <Building className="text-primary" />
+                  Head of Department
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <MenuItem time="8:30 AM" item="Breakfast" />
-                <MenuItem time="10:30 AM" item="Tea Break" />
-                <MenuItem time="12:30 PM" item="Lunch" />
-                <MenuItem time="3:00 PM" item="Tea & Snacks" />
+              <CardContent>
+                <p className="font-semibold">Dr. S. Alex David</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* Guidelines Section */}
-      <section id="guidelines" className="py-20 bg-secondary">
-        <div className="container px-4">
-          <h2 className="section-title text-center mb-8">Event Guidelines</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+            {/* Event Coordinators */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Users className="text-primary" />
-                  Participant Rules
+                  Event Coordinators
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Rule text="Teams must have 3 members" />
-                <Rule text="Registration fee is ₹100 per participant" />
-                <Rule text="Check in before 8:00 AM on Feb 13 for offline session" />
-                <Rule text="Bring a valid ID for verification" />
-                <Rule text="Follow all event timings strictly" />
+                <div>
+                  <p className="font-semibold">Dr. R. Madonna Arieth</p>
+                  <p className="text-muted-foreground">Associate Professor - +91 9994537728</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Dr. B. Prabhu Shankar</p>
+                  <p className="text-muted-foreground">Associate Professor - +91 9894123922</p>
+                </div>
               </CardContent>
             </Card>
 
+            {/* Faculty Coordinators */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <AlertTriangle className="text-primary" />
-                  Submission Rules
+                  <Users className="text-primary" />
+                  Faculty Coordinators
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Rule text="Submit solutions before the specified deadline" />
-                <Rule text="Plagiarism will result in disqualification" />
+              <CardContent className="grid md:grid-cols-2 gap-4">
+                {[
+                  "Dr. Peer Mohamed Appa M A Y (Assistant Professor Senior Grade)",
+                  "Dr. M. Misba (Assistant Professor Senior Grade)",
+                  "Dr. B. Sakthi Karthi Durai (Assistant Professor Senior Grade)",
+                  "Dr. Devi P. P. (Assistant Professor Senior Grade)",
+                  "Dr. D. Prabhu (Assistant Professor)",
+                  "Ms. D. Annal Priyadarshini (Assistant Professor)",
+                  "Mrs. M. S. Saranya (Assistant Professor)",
+                  "Mrs. A. Lizy (Assistant Professor)",
+                  "Ms. N. Hindumathy (Assistant Professor)"
+                ].map((faculty, index) => (
+                  <div key={index} className="p-2 rounded-lg bg-secondary">
+                    <p className="text-sm">{faculty}</p>
+                  </div>
+                ))}
               </CardContent>
             </Card>
 
+            {/* Student Coordinators */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Award className="text-primary" />
-                  Judging Criteria
+                  <Users className="text-primary" />
+                  Student Coordinators
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Rule text="Innovation, feasibility, and execution of solutions" />
+              <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <TeamSection title="Presidents" members={[
+                  { name: "B. Haneesha", id: "VTU22330" },
+                  { name: "V. Preethika", id: "VTU21532" }
+                ]} />
+                <TeamSection title="Vice-Presidents" members={[
+                  { name: "T. Sonika", id: "VTU22119" },
+                  { name: "B. Aswith Kumar", id: "VTU21693" }
+                ]} />
+                <TeamSection title="Tech Leads" members={[
+                  { name: "K. Prasad", id: "VTU24185" },
+                  { name: "Abdullah H. I", id: "VTU22413" }
+                ]} />
+                <TeamSection title="Design Leads" members={[
+                  { name: "M.V.L. Sravanthi", id: "VTU23377" },
+                  { name: "N. Vinod Kumar", id: "VTU23455" }
+                ]} />
+                <TeamSection title="Management Leads" members={[
+                  { name: "K. Prashanth", id: "VTU23449" },
+                  { name: "K. Yashwanthi", id: "VTU22625" }
+                ]} />
+                <TeamSection title="Treasury" members={[
+                  { name: "R. K. Gowtham", id: "VTU21354" },
+                  { name: "P. Hari Govind", id: "VTU21907" }
+                ]} />
+                <TeamSection title="Marketing Team" members={[
+                  { name: "P. Akshay", id: "VTU27165" },
+                  { name: "S. Sasi Kumar Reddy", id: "VTU23375" }
+                ]} />
+                <TeamSection title="Sponsors Team" members={[
+                  { name: "Aadityan M", id: "VTU23911" },
+                  { name: "M. Charan", id: "VTU22691" },
+                  { name: "Sai Charan", id: "VTU22439" }
+                ]} />
               </CardContent>
             </Card>
           </div>
@@ -262,32 +270,15 @@ const Index = () => {
   );
 };
 
-const MenuItem = ({ time, item }: { time: string; item: string }) => (
-  <div className="flex items-center gap-4">
-    <Coffee className="w-4 h-4 text-primary" />
-    <span className="font-medium">{time}</span>
-    <span className="text-muted-foreground">{item}</span>
-  </div>
-);
-
-const PrizeCard = ({ title, amount, icon }: { title: string; amount: string; icon: React.ReactNode }) => (
-  <Card className="card-hover">
-    <CardHeader>
-      <CardTitle className="flex items-center gap-2">
-        {icon}
-        {title}
-      </CardTitle>
-    </CardHeader>
-    <CardContent>
-      <p className="text-xl font-bold">{amount}</p>
-    </CardContent>
-  </Card>
-);
-
-const Rule = ({ text }: { text: string }) => (
-  <div className="flex items-start gap-2">
-    <Check className="w-4 h-4 mt-1 text-primary" />
-    <span className="text-muted-foreground">{text}</span>
+const TeamSection = ({ title, members }: { title: string; members: Array<{ name: string; id: string }> }) => (
+  <div className="space-y-2">
+    <h3 className="font-semibold text-primary">{title}</h3>
+    {members.map((member, index) => (
+      <div key={index} className="p-2 rounded-lg bg-secondary">
+        <p className="text-sm font-medium">{member.name}</p>
+        <p className="text-xs text-muted-foreground">{member.id}</p>
+      </div>
+    ))}
   </div>
 );
 
