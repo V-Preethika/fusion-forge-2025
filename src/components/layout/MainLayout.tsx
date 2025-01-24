@@ -29,7 +29,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
               />
               <div className="flex flex-col items-start">
                 <span className="text-xl font-bold text-primary">Fusion Forge '25</span>
-                <span className="text-xs text-muted-foreground hidden md:block">Vel Tech R&D Institute of Science and Technology</span>
+                <span className="text-xs text-muted-foreground hidden md:block">
+                  Department of Artificial Intelligence and Machine Learning
+                </span>
               </div>
             </Link>
           </nav>
@@ -57,7 +59,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Fusion Forge '25</h3>
               <p className="text-sm text-muted-foreground">
-                24-Hour Hackathon at Vel Tech University
+                24-Hour Hackathon by Department of Artificial Intelligence and Machine Learning
               </p>
             </div>
             <div>
@@ -69,8 +71,6 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-primary hover:text-primary/80">Facebook</a>
-                <a href="#" className="text-primary hover:text-primary/80">Twitter</a>
                 <a href="#" className="text-primary hover:text-primary/80">Instagram</a>
               </div>
             </div>
