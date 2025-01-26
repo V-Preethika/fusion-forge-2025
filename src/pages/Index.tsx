@@ -61,7 +61,8 @@ const Index = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  Feb 12, 6:00 AM - Feb 13, 6:00 AM
+                  Feb 12, 6:00 PM - Feb 13, 6:00 AM<br />
+                  <span className="text-sm text-muted-foreground">Problem statements will be shared via WhatsApp on Feb 12th</span>
                 </CardContent>
               </Card>
               <Card className="card-hover">
@@ -91,8 +92,47 @@ const Index = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-2xl font-bold text-primary">₹300 per team member</p>
+              <p className="text-2xl font-bold text-primary">₹300 per team</p>
               <p className="text-muted-foreground mt-2">Lunch and snacks included</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Prizes Section */}
+      <section className="py-20">
+        <div className="container px-4">
+          <h2 className="section-title text-center mb-8">Prizes</h2>
+          <Card className="max-w-lg mx-auto">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Trophy className="text-primary" />
+                Prizes worth ₹25,000 await the best minds!
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <p className="text-xl font-bold flex items-center gap-2">
+                  <Sparkles className="text-yellow-500" />
+                  1st Prize: ₹10,000
+                </p>
+                <p className="text-lg font-semibold flex items-center gap-2">
+                  <Sparkles className="text-gray-400" />
+                  2nd Prize: ₹7,500
+                </p>
+                <p className="text-lg font-semibold flex items-center gap-2">
+                  <Sparkles className="text-amber-600" />
+                  3rd Prize: ₹5,000
+                </p>
+                <p className="text-muted-foreground">
+                  Consolation Prizes: ₹1,000 each for three teams
+                </p>
+              </div>
+              <div className="mt-4 p-4 bg-secondary rounded-lg">
+                <p className="text-sm italic text-muted-foreground">
+                  Pay ₹300 for a chance to win ₹10,000 and free snacks—this is the jackpot you've been waiting for!
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -247,6 +287,7 @@ const Index = () => {
               <CardContent>
                 <p className="text-muted-foreground">
                   Learning Space 1 and 2,<br />
+                  CSE Block,<br />
                   Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology<br />
                   <span className="font-semibold mt-2 block">Department of Artificial Intelligence and Machine Learning</span>
                 </p>
