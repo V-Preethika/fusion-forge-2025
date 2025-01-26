@@ -36,9 +36,12 @@ const Index = () => {
               >
                 Register Now
               </a>
-              <a href="#guidelines" className="inline-flex items-center justify-center rounded-lg border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white">
+              <Link 
+                to="/guidelines" 
+                className="inline-flex items-center justify-center rounded-lg border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
+              >
                 Event Guidelines
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
