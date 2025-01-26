@@ -104,6 +104,26 @@ const Index = () => {
           <h2 className="section-title text-center mb-8">Event Organizers</h2>
           
           <div className="grid gap-8 max-w-4xl mx-auto">
+            {/* Convenors */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Building className="text-primary" />
+                  Convenors
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <p className="font-semibold">Prof. Dr. S.P. Chokkalingam</p>
+                  <p className="text-muted-foreground">Dean - School of Computing</p>
+                </div>
+                <div className="space-y-2 mt-4">
+                  <p className="font-semibold">Prof. Dr. V. Dhilipkumar</p>
+                  <p className="text-muted-foreground">Associate Dean</p>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* HOD */}
             <Card>
               <CardHeader>
