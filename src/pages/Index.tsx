@@ -381,6 +381,9 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
             </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20">
@@ -440,17 +443,5 @@ const Index = () => {
     </div>
   );
 };
-
-const TeamSection = ({ title, members }: { title: string; members: Array<{ name: string; id: string }> }) => (
-  <div className="space-y-2">
-    <h3 className="font-semibold text-primary">{title}</h3>
-    {members.map((member, index) => (
-      <div key={index} className="p-2 rounded-lg bg-secondary">
-        <p className="text-sm font-medium">{member.name}</p>
-        <p className="text-xs text-muted-foreground">{member.id}</p>
-      </div>
-    ))}
-  </div>
-);
 
 export default Index;
