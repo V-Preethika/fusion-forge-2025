@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 
 const Index = () => {
   return (
@@ -236,32 +237,69 @@ const Index = () => {
                 <CardTitle className="flex items-center gap-2">
                   <Users className="text-primary" />
                   Student Coordinators
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                  <Popover>
+                    <PopoverTrigger asChild>
                       <Button variant="ghost" size="icon">
                         <List className="h-4 w-4" />
                       </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-[250px]">
-                      <DropdownMenuItem>B. Haneesha (VTU22330) - President</DropdownMenuItem>
-                      <DropdownMenuItem>V. Preethika (VTU21532) - President</DropdownMenuItem>
-                      <DropdownMenuItem>T. Sonika (VTU22119) - Vice President</DropdownMenuItem>
-                      <DropdownMenuItem>B. Aswith Kumar (VTU21693) - Vice President</DropdownMenuItem>
-                      <DropdownMenuItem>K. Prasad (VTU24185) - Technical Lead</DropdownMenuItem>
-                      <DropdownMenuItem>Abdullah H. I (VTU22413) - Technical Team</DropdownMenuItem>
-                      <DropdownMenuItem>M.V.L. Sravanthi (VTU23377) - Design Lead</DropdownMenuItem>
-                      <DropdownMenuItem>N. Vinod Kumar (VTU23455) - Design Team</DropdownMenuItem>
-                      <DropdownMenuItem>K. Prashanth (VTU23449) - Management Lead</DropdownMenuItem>
-                      <DropdownMenuItem>K. Yashwanthi (VTU22625) - Management Team</DropdownMenuItem>
-                      <DropdownMenuItem>R. K. Gowtham (VTU21354) - Treasurer</DropdownMenuItem>
-                      <DropdownMenuItem>P. Hari Govind (VTU21907) - Treasurer</DropdownMenuItem>
-                      <DropdownMenuItem>P. Akshay (VTU27165) - Marketing Team</DropdownMenuItem>
-                      <DropdownMenuItem>S. Sasi Kumar Reddy (VTU23375) - Marketing Team</DropdownMenuItem>
-                      <DropdownMenuItem>Aadityan M (VTU23911) - Sponsors Team</DropdownMenuItem>
-                      <DropdownMenuItem>M. Charan (VTU22691) - Sponsors Team</DropdownMenuItem>
-                      <DropdownMenuItem>Sai Charan (VTU22439) - Sponsors Team</DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-[350px] p-4">
+                      <div className="space-y-4">
+                        <div className="grid gap-2">
+                          <div className="font-medium">Leadership</div>
+                          <div className="text-sm grid gap-1">
+                            <div>B. Haneesha (VTU22330) - President</div>
+                            <div>V. Preethika (VTU21532) - President</div>
+                            <div>T. Sonika (VTU22119) - Vice President</div>
+                            <div>B. Aswith Kumar (VTU21693) - Vice President</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Technical Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>K. Prasad (VTU24185) - Technical Lead</div>
+                            <div>Abdullah H. I (VTU22413) - Technical Team</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Design Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>M.V.L. Sravanthi (VTU23377) - Design Lead</div>
+                            <div>N. Vinod Kumar (VTU23455) - Design Team</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Management Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>K. Prashanth (VTU23449) - Management Lead</div>
+                            <div>K. Yashwanthi (VTU22625) - Management Team</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Finance Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>R. K. Gowtham (VTU21354) - Treasurer</div>
+                            <div>P. Hari Govind (VTU21907) - Treasurer</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Marketing Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>P. Akshay (VTU27165) - Marketing Team</div>
+                            <div>S. Sasi Kumar Reddy (VTU23375) - Marketing Team</div>
+                          </div>
+                        </div>
+                        <div className="grid gap-2">
+                          <div className="font-medium">Sponsors Team</div>
+                          <div className="text-sm grid gap-1">
+                            <div>Aadityan M (VTU23911) - Sponsors Team</div>
+                            <div>M. Charan (VTU22691) - Sponsors Team</div>
+                            <div>Sai Charan (VTU22439) - Sponsors Team</div>
+                          </div>
+                        </div>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 </CardTitle>
               </CardHeader>
             </Card>
@@ -341,3 +379,4 @@ const TeamSection = ({ title, members }: { title: string; members: Array<{ name:
 );
 
 export default Index;
+
