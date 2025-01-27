@@ -264,76 +264,6 @@ const Index = () => {
                   </DropdownMenu>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">B. Haneesha</p>
-                  <p className="text-xs text-muted-foreground">VTU22330</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">V. Preethika</p>
-                  <p className="text-xs text-muted-foreground">VTU21532</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">T. Sonika</p>
-                  <p className="text-xs text-muted-foreground">VTU22119</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">B. Aswith Kumar</p>
-                  <p className="text-xs text-muted-foreground">VTU21693</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">K. Prasad</p>
-                  <p className="text-xs text-muted-foreground">VTU24185</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">Abdullah H. I</p>
-                  <p className="text-xs text-muted-foreground">VTU22413</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">M.V.L. Sravanthi</p>
-                  <p className="text-xs text-muted-foreground">VTU23377</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">N. Vinod Kumar</p>
-                  <p className="text-xs text-muted-foreground">VTU23455</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">K. Prashanth</p>
-                  <p className="text-xs text-muted-foreground">VTU23449</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">K. Yashwanthi</p>
-                  <p className="text-xs text-muted-foreground">VTU22625</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">R. K. Gowtham</p>
-                  <p className="text-xs text-muted-foreground">VTU21354</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">P. Hari Govind</p>
-                  <p className="text-xs text-muted-foreground">VTU21907</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">P. Akshay</p>
-                  <p className="text-xs text-muted-foreground">VTU27165</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">S. Sasi Kumar Reddy</p>
-                  <p className="text-xs text-muted-foreground">VTU23375</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">Aadityan M</p>
-                  <p className="text-xs text-muted-foreground">VTU23911</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">M. Charan</p>
-                  <p className="text-xs text-muted-foreground">VTU22691</p>
-                </div>
-                <div className="p-2 rounded-lg bg-secondary">
-                  <p className="text-sm font-medium">Sai Charan</p>
-                  <p className="text-xs text-muted-foreground">VTU22439</p>
-                </div>
-              </CardContent>
             </Card>
           </div>
         </div>
@@ -411,3 +341,4 @@ const TeamSection = ({ title, members }: { title: string; members: Array<{ name:
 );
 
 export default Index;
+
