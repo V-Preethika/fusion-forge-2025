@@ -242,24 +242,24 @@ const Index = () => {
                         <List className="h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-[200px]">
-                      <DropdownMenuItem>B. Haneesha (VTU22330)</DropdownMenuItem>
-                      <DropdownMenuItem>V. Preethika (VTU21532)</DropdownMenuItem>
-                      <DropdownMenuItem>T. Sonika (VTU22119)</DropdownMenuItem>
-                      <DropdownMenuItem>B. Aswith Kumar (VTU21693)</DropdownMenuItem>
-                      <DropdownMenuItem>K. Prasad (VTU24185)</DropdownMenuItem>
-                      <DropdownMenuItem>Abdullah H. I (VTU22413)</DropdownMenuItem>
-                      <DropdownMenuItem>M.V.L. Sravanthi (VTU23377)</DropdownMenuItem>
-                      <DropdownMenuItem>N. Vinod Kumar (VTU23455)</DropdownMenuItem>
-                      <DropdownMenuItem>K. Prashanth (VTU23449)</DropdownMenuItem>
-                      <DropdownMenuItem>K. Yashwanthi (VTU22625)</DropdownMenuItem>
-                      <DropdownMenuItem>R. K. Gowtham (VTU21354)</DropdownMenuItem>
-                      <DropdownMenuItem>P. Hari Govind (VTU21907)</DropdownMenuItem>
-                      <DropdownMenuItem>P. Akshay (VTU27165)</DropdownMenuItem>
-                      <DropdownMenuItem>S. Sasi Kumar Reddy (VTU23375)</DropdownMenuItem>
-                      <DropdownMenuItem>Aadityan M (VTU23911)</DropdownMenuItem>
-                      <DropdownMenuItem>M. Charan (VTU22691)</DropdownMenuItem>
-                      <DropdownMenuItem>Sai Charan (VTU22439)</DropdownMenuItem>
+                    <DropdownMenuContent align="end" className="w-[250px]">
+                      <DropdownMenuItem>B. Haneesha (VTU22330) - President</DropdownMenuItem>
+                      <DropdownMenuItem>V. Preethika (VTU21532) - President</DropdownMenuItem>
+                      <DropdownMenuItem>T. Sonika (VTU22119) - Vice President</DropdownMenuItem>
+                      <DropdownMenuItem>B. Aswith Kumar (VTU21693) - Vice President</DropdownMenuItem>
+                      <DropdownMenuItem>K. Prasad (VTU24185) - Technical Lead</DropdownMenuItem>
+                      <DropdownMenuItem>Abdullah H. I (VTU22413) - Technical Team</DropdownMenuItem>
+                      <DropdownMenuItem>M.V.L. Sravanthi (VTU23377) - Design Lead</DropdownMenuItem>
+                      <DropdownMenuItem>N. Vinod Kumar (VTU23455) - Design Team</DropdownMenuItem>
+                      <DropdownMenuItem>K. Prashanth (VTU23449) - Management Lead</DropdownMenuItem>
+                      <DropdownMenuItem>K. Yashwanthi (VTU22625) - Management Team</DropdownMenuItem>
+                      <DropdownMenuItem>R. K. Gowtham (VTU21354) - Treasurer</DropdownMenuItem>
+                      <DropdownMenuItem>P. Hari Govind (VTU21907) - Treasurer</DropdownMenuItem>
+                      <DropdownMenuItem>P. Akshay (VTU27165) - Marketing Team</DropdownMenuItem>
+                      <DropdownMenuItem>S. Sasi Kumar Reddy (VTU23375) - Marketing Team</DropdownMenuItem>
+                      <DropdownMenuItem>Aadityan M (VTU23911) - Sponsors Team</DropdownMenuItem>
+                      <DropdownMenuItem>M. Charan (VTU22691) - Sponsors Team</DropdownMenuItem>
+                      <DropdownMenuItem>Sai Charan (VTU22439) - Sponsors Team</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </CardTitle>
@@ -341,4 +341,3 @@ const TeamSection = ({ title, members }: { title: string; members: Array<{ name:
 );
 
 export default Index;
-
