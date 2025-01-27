@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Users, Mail, Check, AlertTriangle, Award, Building, Instagram, Coffee, IndianRupee, Trophy, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Mail, Check, AlertTriangle, Award, Building, Instagram, Coffee, IndianRupee, Trophy, Sparkles, List } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Index = () => {
   return (
@@ -230,42 +236,103 @@ const Index = () => {
                 <CardTitle className="flex items-center gap-2">
                   <Users className="text-primary" />
                   Student Coordinators
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon">
+                        <List className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-[200px]">
+                      <DropdownMenuItem>B. Haneesha (VTU22330)</DropdownMenuItem>
+                      <DropdownMenuItem>V. Preethika (VTU21532)</DropdownMenuItem>
+                      <DropdownMenuItem>T. Sonika (VTU22119)</DropdownMenuItem>
+                      <DropdownMenuItem>B. Aswith Kumar (VTU21693)</DropdownMenuItem>
+                      <DropdownMenuItem>K. Prasad (VTU24185)</DropdownMenuItem>
+                      <DropdownMenuItem>Abdullah H. I (VTU22413)</DropdownMenuItem>
+                      <DropdownMenuItem>M.V.L. Sravanthi (VTU23377)</DropdownMenuItem>
+                      <DropdownMenuItem>N. Vinod Kumar (VTU23455)</DropdownMenuItem>
+                      <DropdownMenuItem>K. Prashanth (VTU23449)</DropdownMenuItem>
+                      <DropdownMenuItem>K. Yashwanthi (VTU22625)</DropdownMenuItem>
+                      <DropdownMenuItem>R. K. Gowtham (VTU21354)</DropdownMenuItem>
+                      <DropdownMenuItem>P. Hari Govind (VTU21907)</DropdownMenuItem>
+                      <DropdownMenuItem>P. Akshay (VTU27165)</DropdownMenuItem>
+                      <DropdownMenuItem>S. Sasi Kumar Reddy (VTU23375)</DropdownMenuItem>
+                      <DropdownMenuItem>Aadityan M (VTU23911)</DropdownMenuItem>
+                      <DropdownMenuItem>M. Charan (VTU22691)</DropdownMenuItem>
+                      <DropdownMenuItem>Sai Charan (VTU22439)</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </CardTitle>
               </CardHeader>
               <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <TeamSection title="Presidents" members={[
-                  { name: "B. Haneesha", id: "VTU22330" },
-                  { name: "V. Preethika", id: "VTU21532" }
-                ]} />
-                <TeamSection title="Vice-Presidents" members={[
-                  { name: "T. Sonika", id: "VTU22119" },
-                  { name: "B. Aswith Kumar", id: "VTU21693" }
-                ]} />
-                <TeamSection title="Tech Leads" members={[
-                  { name: "K. Prasad", id: "VTU24185" },
-                  { name: "Abdullah H. I", id: "VTU22413" }
-                ]} />
-                <TeamSection title="Design Leads" members={[
-                  { name: "M.V.L. Sravanthi", id: "VTU23377" },
-                  { name: "N. Vinod Kumar", id: "VTU23455" }
-                ]} />
-                <TeamSection title="Management Leads" members={[
-                  { name: "K. Prashanth", id: "VTU23449" },
-                  { name: "K. Yashwanthi", id: "VTU22625" }
-                ]} />
-                <TeamSection title="Treasury" members={[
-                  { name: "R. K. Gowtham", id: "VTU21354" },
-                  { name: "P. Hari Govind", id: "VTU21907" }
-                ]} />
-                <TeamSection title="Marketing Team" members={[
-                  { name: "P. Akshay", id: "VTU27165" },
-                  { name: "S. Sasi Kumar Reddy", id: "VTU23375" }
-                ]} />
-                <TeamSection title="Sponsors Team" members={[
-                  { name: "Aadityan M", id: "VTU23911" },
-                  { name: "M. Charan", id: "VTU22691" },
-                  { name: "Sai Charan", id: "VTU22439" }
-                ]} />
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">B. Haneesha</p>
+                  <p className="text-xs text-muted-foreground">VTU22330</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">V. Preethika</p>
+                  <p className="text-xs text-muted-foreground">VTU21532</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">T. Sonika</p>
+                  <p className="text-xs text-muted-foreground">VTU22119</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">B. Aswith Kumar</p>
+                  <p className="text-xs text-muted-foreground">VTU21693</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">K. Prasad</p>
+                  <p className="text-xs text-muted-foreground">VTU24185</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">Abdullah H. I</p>
+                  <p className="text-xs text-muted-foreground">VTU22413</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">M.V.L. Sravanthi</p>
+                  <p className="text-xs text-muted-foreground">VTU23377</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">N. Vinod Kumar</p>
+                  <p className="text-xs text-muted-foreground">VTU23455</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">K. Prashanth</p>
+                  <p className="text-xs text-muted-foreground">VTU23449</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">K. Yashwanthi</p>
+                  <p className="text-xs text-muted-foreground">VTU22625</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">R. K. Gowtham</p>
+                  <p className="text-xs text-muted-foreground">VTU21354</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">P. Hari Govind</p>
+                  <p className="text-xs text-muted-foreground">VTU21907</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">P. Akshay</p>
+                  <p className="text-xs text-muted-foreground">VTU27165</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">S. Sasi Kumar Reddy</p>
+                  <p className="text-xs text-muted-foreground">VTU23375</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">Aadityan M</p>
+                  <p className="text-xs text-muted-foreground">VTU23911</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">M. Charan</p>
+                  <p className="text-xs text-muted-foreground">VTU22691</p>
+                </div>
+                <div className="p-2 rounded-lg bg-secondary">
+                  <p className="text-sm font-medium">Sai Charan</p>
+                  <p className="text-xs text-muted-foreground">VTU22439</p>
+                </div>
               </CardContent>
             </Card>
           </div>
