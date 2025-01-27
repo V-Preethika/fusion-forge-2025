@@ -243,69 +243,144 @@ const Index = () => {
                         <List className="h-4 w-4" />
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-[350px] p-4">
-                      <div className="space-y-4">
-                        <div className="grid gap-2">
-                          <div className="font-medium">Leadership</div>
-                          <div className="text-sm grid gap-1">
-                            <div>B. Haneesha (VTU22330) - President</div>
-                            <div>V. Preethika (VTU21532) - President</div>
-                            <div>T. Sonika (VTU22119) - Vice President</div>
-                            <div>B. Aswith Kumar (VTU21693) - Vice President</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Technical Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>K. Prasad (VTU24185) - Technical Lead</div>
-                            <div>Abdullah H. I (VTU22413) - Technical Team</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Design Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>M.V.L. Sravanthi (VTU23377) - Design Lead</div>
-                            <div>N. Vinod Kumar (VTU23455) - Design Team</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Management Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>K. Prashanth (VTU23449) - Management Lead</div>
-                            <div>K. Yashwanthi (VTU22625) - Management Team</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Finance Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>R. K. Gowtham (VTU21354) - Treasurer</div>
-                            <div>P. Hari Govind (VTU21907) - Treasurer</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Marketing Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>P. Akshay (VTU27165) - Marketing Team</div>
-                            <div>S. Sasi Kumar Reddy (VTU23375) - Marketing Team</div>
-                          </div>
-                        </div>
-                        <div className="grid gap-2">
-                          <div className="font-medium">Sponsors Team</div>
-                          <div className="text-sm grid gap-1">
-                            <div>Aadityan M (VTU23911) - Sponsors Team</div>
-                            <div>M. Charan (VTU22691) - Sponsors Team</div>
-                            <div>Sai Charan (VTU22439) - Sponsors Team</div>
-                          </div>
-                        </div>
+                    <PopoverContent className="w-[800px] p-6">
+                      <div className="grid grid-cols-2 gap-6">
+                        {/* Leadership Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Leadership Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">B. Haneesha (VTU22330)</p>
+                              <p className="text-sm text-muted-foreground">President</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">V. Preethika (VTU21532)</p>
+                              <p className="text-sm text-muted-foreground">President</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">T. Sonika (VTU22119)</p>
+                              <p className="text-sm text-muted-foreground">Vice President</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">B. Aswith Kumar (VTU21693)</p>
+                              <p className="text-sm text-muted-foreground">Vice President</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Technical Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Technical Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">K. Prasad (VTU24185)</p>
+                              <p className="text-sm text-muted-foreground">Technical Lead</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">Abdullah H. I (VTU22413)</p>
+                              <p className="text-sm text-muted-foreground">Technical Team Member</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Design Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Design Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">M.V.L. Sravanthi (VTU23377)</p>
+                              <p className="text-sm text-muted-foreground">Design Lead</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">N. Vinod Kumar (VTU23455)</p>
+                              <p className="text-sm text-muted-foreground">Design Team Member</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Management Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Management Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">K. Prashanth (VTU23449)</p>
+                              <p className="text-sm text-muted-foreground">Management Lead</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">K. Yashwanthi (VTU22625)</p>
+                              <p className="text-sm text-muted-foreground">Management Team Member</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Finance Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Finance Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">R. K. Gowtham (VTU21354)</p>
+                              <p className="text-sm text-muted-foreground">Treasurer</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">P. Hari Govind (VTU21907)</p>
+                              <p className="text-sm text-muted-foreground">Treasurer</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Marketing Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Marketing Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">P. Akshay (VTU27165)</p>
+                              <p className="text-sm text-muted-foreground">Marketing Team Member</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">S. Sasi Kumar Reddy (VTU23375)</p>
+                              <p className="text-sm text-muted-foreground">Marketing Team Member</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Sponsors Team */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg text-primary">Sponsors Team</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-2">
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">Aadityan M (VTU23911)</p>
+                              <p className="text-sm text-muted-foreground">Sponsors Team Member</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">M. Charan (VTU22691)</p>
+                              <p className="text-sm text-muted-foreground">Sponsors Team Member</p>
+                            </div>
+                            <div className="p-2 rounded-lg bg-secondary">
+                              <p className="font-medium">Sai Charan (VTU22439)</p>
+                              <p className="text-sm text-muted-foreground">Sponsors Team Member</p>
+                            </div>
+                          </CardContent>
+                        </Card>
                       </div>
                     </PopoverContent>
                   </Popover>
                 </CardTitle>
               </CardHeader>
             </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20">
@@ -379,4 +454,3 @@ const TeamSection = ({ title, members }: { title: string; members: Array<{ name:
 );
 
 export default Index;
-
